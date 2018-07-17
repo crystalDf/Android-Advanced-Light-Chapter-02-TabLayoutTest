@@ -2,6 +2,7 @@ package com.star.tablayouttest;
 
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
+import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -33,6 +34,7 @@ public class TabLayoutActivity extends AppCompatActivity {
         mTabLayout = findViewById(R.id.tab_layout);
 
         List<String> titles = new ArrayList<>();
+        List<Fragment> fragments = new ArrayList<>();
 
         titles.add("精选");
         titles.add("体育");
@@ -42,6 +44,7 @@ public class TabLayoutActivity extends AppCompatActivity {
         for (String title : titles) {
 
             mTabLayout.addTab(mTabLayout.newTab().setText(title));
+            fragments.add(new ListFragment());
         }
     }
 }
