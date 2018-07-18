@@ -16,6 +16,8 @@ public class TabLayoutActivity extends AppCompatActivity {
     private TabLayout mTabLayout;
     private Toolbar mToolbar;
 
+    private FragmentAdapter mFragmentAdapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,5 +48,11 @@ public class TabLayoutActivity extends AppCompatActivity {
             mTabLayout.addTab(mTabLayout.newTab().setText(title));
             fragments.add(new ListFragment());
         }
+
+        mFragmentAdapter = new FragmentAdapter(
+                getSupportFragmentManager(), fragments, titles);
+
+        mViewPager.setAdapter(mFragmentAdapter);
+        mTabLayout.setupWithViewPager(mViewPager);
     }
 }
