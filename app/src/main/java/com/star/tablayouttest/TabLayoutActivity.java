@@ -42,6 +42,15 @@ public class TabLayoutActivity extends AppCompatActivity {
         titles.add("体育");
         titles.add("巴萨");
         titles.add("购物");
+        titles.add("明星");
+        titles.add("视频");
+        titles.add("健康");
+        titles.add("励志");
+        titles.add("图文");
+        titles.add("本地");
+        titles.add("动漫");
+        titles.add("搞笑");
+        titles.add("精选");
 
         for (String title : titles) {
 
