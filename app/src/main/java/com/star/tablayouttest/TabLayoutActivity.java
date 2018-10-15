@@ -53,7 +53,6 @@ public class TabLayoutActivity extends AppCompatActivity {
         titles.add("精选");
 
         for (String title : titles) {
-
             mTabLayout.addTab(mTabLayout.newTab().setText(title));
             fragments.add(new ListFragment());
         }
